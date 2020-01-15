@@ -5,12 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavegationComponent } from './navegation-bar/navegation.component';
-import { SequencePictureComponent } from './sequence-picture/sequence-picture.component';
+import { SequencePictureComponent } from './home/sequence-picture/sequence-picture.component';
 import { FooterComponent } from './footer/footer.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { ListarComponent } from './listar/listar.component';
+import { GenerosComponent } from './generos/generos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShoujoComponent } from './generos/shoujo/shoujo.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-@NgModule({
+
+@NgModule({ 
   declarations: [
     AppComponent,
     HomeComponent,
@@ -18,11 +23,15 @@ import { ListarComponent } from './listar/listar.component';
     SequencePictureComponent,
     FooterComponent,
     RankingComponent,
-    ListarComponent
+    ListarComponent,
+    GenerosComponent,
+    ShoujoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

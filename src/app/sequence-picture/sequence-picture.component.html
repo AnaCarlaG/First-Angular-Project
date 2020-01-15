@@ -1,17 +1,25 @@
- <div class="container container mt-4 mb-5">
+<div class="container container mt-4 mb-5">
     <h3 class="display-4 text-center"> Animes </h3>
     <hr class="bg-dark mb-4 w-25">
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185/ThmospzX4BjLKCsvRFhgImirKn.jpg" alt="Card image cap">
-                <div class="card-block p-3">
-                    <h4 class="card-title">Kuroko no Basket</h4>
-                    <p class="card-text">Kuroko é um membro do time de basquete colegial lendário conhecido como “Geração dos Milagres”, e embora ninguém saiba, os cinco principais jogadores o consideram o melhor jogador de basquete. Quando ele se junta à equipe, todos se surpreendem ao descobrir que Kuroko é pequeno, magro e fraco..qual é o segredo que o faz tão famoso, e quais de suas habilidades são capazes de ajudar a sua equipe?</p>
-                    <a href="#" class="btn btn-primary rounded-0 mb-2">Read More</a>
-                </div>
+                <app-photo *ngFor="let photo of photos" url="photo.url"></app-photo *ngFor="let photo of photos">
+            </div>
+            <div class="card-block p-3">
+                <h4 class="card-title">
+                    <app-photo *ngFor="let photo of photos" title="photos.title"></app-photo>
+                </h4>
+                <p>
+                    <app-photo *ngFor="let photo of photos" description="photos.description"></app-photo>
+                </p>
+                <a href="#" class="btn btn-primary rounded-0 mb-2">Read More</a>
             </div>
         </div>
+
+
+
+        <!--
         <div class="col-md-4">
             <div class="card">
                 <img class="card-img-top" src="https://image.tmdb.org/t/p/w185/tS8alvl1PtJQIR3eBMhQ2lqZCuf.jpg" alt="Card image cap">
@@ -32,5 +40,5 @@
                 </div>
             </div>
         </div>
+    </div> -->
     </div>
-</div>

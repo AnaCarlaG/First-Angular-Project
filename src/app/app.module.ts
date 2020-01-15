@@ -13,6 +13,8 @@ import { GenerosComponent } from './generos/generos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShoujoComponent } from './generos/shoujo/shoujo.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PhotoComponent } from './photo/photo.component';
+import { PhotoService } from './services/photo-service.service';
 
 
 @NgModule({ 
@@ -25,7 +27,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     RankingComponent,
     ListarComponent,
     GenerosComponent,
-    ShoujoComponent
+    ShoujoComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HttpClientModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

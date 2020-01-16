@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class PhotoService{
 
-    contructor(){}
+    private http: HttpClient;
+    contructor(http){
+
+    }
 
     getPhoto(){
         return [
